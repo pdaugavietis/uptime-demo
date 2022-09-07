@@ -1,0 +1,26 @@
+version: "3.1"
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    ports:
+      - 3001:3001
+    volumes:
+      - uptime-kuma:/app/data
+  
+  service-alpha:
+    image: nginx
+    ports:
+      - 8080:80
+      
+  service-beta:
+    image: nginx
+    ports:
+      - 8081:80
+
+  service-gamma:
+    image: nginx
+    ports:
+      - 8082:80
+    
+volumes:
+  uptime-kuma:

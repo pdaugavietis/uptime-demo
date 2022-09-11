@@ -9,5 +9,5 @@ terraform {
 }
 
 provider "pagerduty" {
-  token = "u+D-xdkyHzppNTZziazQ"
+  token = API_TOKEN
 }
